@@ -1,0 +1,132 @@
+.equipment-page {
+    padding: 80px 20px 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: #f8f9fa;
+    color: #333;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.back-button:hover {
+    background: #e9ecef;
+    transform: translateX(-3px);
+}
+
+.equipment-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.equipment-header h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.equipment-header p {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.equipment-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+
+.equipment-card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.equipment-card:hover {
+    transform: translateY(-5px);
+}
+
+.equipment-icon {
+    font-size: 3rem;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.equipment-info {
+    text-align: center;
+}
+
+.equipment-info h3 {
+    color: #333;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.equipment-info p {
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.equipment-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.equipment-list li {
+    color: #555;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.equipment-list li:last-child {
+    border-bottom: none;
+}
+
+@media (max-width: 768px) {
+    .equipment-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .equipment-card {
+        padding: 20px;
+    }
+
+    .equipment-header h1 {
+        font-size: 2rem;
+    }
+
+    .equipment-icon {
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+  .equipment-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .equipment-card {
+    margin: 10px;
+  }
+}

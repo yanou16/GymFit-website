@@ -1,0 +1,347 @@
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-100px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.membership-page {
+    padding: 80px 20px 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.membership-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.membership-header h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.membership-header p {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.plans-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+
+.plan-card {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    position: relative;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+    border: 2px solid transparent;
+}
+
+.plan-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--plan-color);
+}
+
+.plan-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    color: white;
+    font-size: 1.8rem;
+}
+
+.plan-card h2 {
+    color: #333;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.plan-price {
+    margin-bottom: 30px;
+}
+
+.currency {
+    font-size: 1.5rem;
+    color: #666;
+    vertical-align: top;
+}
+
+.amount {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--plan-color);
+}
+
+.duration {
+    color: #666;
+}
+
+.plan-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px;
+    text-align: left;
+}
+
+.plan-features li {
+    padding: 10px 0;
+    color: #666;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.plan-features li svg {
+    color: var(--plan-color);
+    flex-shrink: 0;
+}
+
+.select-plan-btn {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 25px;
+    background: var(--plan-color);
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.select-plan-btn:hover {
+    filter: brightness(110%);
+    transform: translateY(-2px);
+}
+
+.popular {
+    transform: scale(1.05);
+}
+
+.popular:hover {
+    transform: scale(1.05) translateY(-5px);
+}
+
+.popular-tag {
+    position: absolute;
+    top: -15px;
+    right: 20px;
+    background: #e74c3c;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .membership-page {
+        padding: 60px 15px 40px;
+    }
+
+    .plans-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .popular {
+        transform: none;
+    }
+
+    .popular:hover {
+        transform: translateY(-5px);
+    }
+}
+
+* {
+    transition: all 0.3s ease;
+}
+
+/* Update the image styles */
+.testimonial-image {
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+}
+
+.testimonial-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover .testimonial-image img {
+    transform: scale(1.1);
+}
+
+/* Payment Modal Styles */
+.payment-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.payment-modal {
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+}
+
+.close-modal {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #666;
+}
+
+.selected-plan-summary {
+  text-align: center;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.payment-methods {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.payment-method {
+  flex: 1;
+  padding: 15px;
+  border: 2px solid #eee;
+  border-radius: 10px;
+  background: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+}
+
+.payment-method.active {
+  border-color: #007bff;
+  background: #f8f9fa;
+}
+
+.payment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-weight: 500;
+  color: #333;
+}
+
+.form-group input {
+  padding: 12px;
+  border: 2px solid #eee;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.submit-payment {
+  background: #007bff;
+  color: white;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+.submit-payment:hover {
+  background: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .payment-modal {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .plans-container {
+    grid-template-columns: 1fr;
+    padding: 20px 10px;
+  }
+
+  .plan-card {
+    margin: 10px 0;
+  }
+
+  .payment-modal {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}

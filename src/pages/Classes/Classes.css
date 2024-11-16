@@ -1,0 +1,98 @@
+.classes-page {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.classes-header {
+    text-align: center;
+    padding: 40px 0;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../../images/classes-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+.classes-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.classes-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 20px;
+}
+
+.class-item {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.class-item:hover {
+    transform: translateY(-5px);
+}
+
+.class-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+.class-image.yoga {
+    background-image: url('../../images/yoga.jpg');
+}
+
+.class-image.cardio {
+    background-image: url('../../images/cardio.jpg');
+}
+
+.class-image.strength {
+    background-image: url('../../images/strength.jpg');
+}
+
+.class-image.spinning {
+    background-image: url('../../images/spinning.jpg');
+}
+
+.class-info {
+    padding: 20px;
+}
+
+.class-info h2 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.schedule {
+    color: #ff4444;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.join-button {
+    background-color: #ff4444;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+}
+
+.join-button:hover {
+    background-color: #ff2222;
+}
+
+@media (max-width: 768px) {
+    .classes-container {
+        grid-template-columns: 1fr;
+    }
+}
